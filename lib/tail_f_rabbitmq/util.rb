@@ -19,7 +19,7 @@ module FIR
           Thread.new do
             tail_f event.absolute_name do |lines, queue|
               send_msg event.name, lines
-              queue.stop if lines.include? "end"
+              queue.stop if lines.include? config[:eof]
             end
           end
         end

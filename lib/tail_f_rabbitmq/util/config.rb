@@ -6,7 +6,8 @@ module FIR
     def default_config
       config = {
         url: "amqp://guest:guest@localhost:5672",
-        queue: "log_line"
+        queue: "log_line",
+        eof: "END"
       }
     end
 

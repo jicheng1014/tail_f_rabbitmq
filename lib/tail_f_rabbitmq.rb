@@ -6,7 +6,6 @@ require_relative "./tail_f_rabbitmq/patches"
 require_relative "./tail_f_rabbitmq/util"
 
 module TailFRabbitmq
-  # Your code goes here...
   include FIR::Util
 end
 
