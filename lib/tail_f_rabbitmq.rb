@@ -1,5 +1,6 @@
 require_relative "./tail_f_rabbitmq/version"
 require 'yaml'
+require 'thor'
 require 'bunny'
 require "byebug"
 require_relative "./tail_f_rabbitmq/patches"
