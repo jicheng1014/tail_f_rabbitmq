@@ -10,4 +10,4 @@ module TailFRabbitmq
   include FIR::Util
 end
 
-TailFRabbitmq.monitor("/tmp/")
+FIR::CLI.start ARGV
