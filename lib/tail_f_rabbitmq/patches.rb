@@ -1,2 +1,3 @@
 require_relative './patches/concern'
-require_relative './patches/native_path'
+require_relative './patches/native_patch'
+require_relative './patches/os_patch'
