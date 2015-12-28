@@ -27,8 +27,9 @@ module FIR
       File.open(CONFIG_PATH, 'w+') { |f| f << YAML.dump(hash) }
     end
 
-    def current_token
-      @token ||= config[:token] if config
+    def reset_config
+      @config = default_config
+      write_config @config
     end
   end
 end

@@ -42,7 +42,7 @@ module FIR
           name: name,
           line: line
         }
-        @x.publish(msg.to_json, :routing_key => @q.name)
+        @x.publish(msg.to_json, :routing_key => @q.name) if line != ""
       end
     end
   end
