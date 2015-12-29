@@ -7,6 +7,7 @@ module FIR
       config = {
         url: "amqp://guest:guest@localhost:5672",
         queue: "log_line",
+        file_filter: ".log",
         eof: "END"
       }
     end

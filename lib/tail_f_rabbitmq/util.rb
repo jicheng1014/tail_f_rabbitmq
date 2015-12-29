@@ -15,11 +15,14 @@ module FIR
         @q  = @ch.queue(config[:queue], :auto_delete => true)
         @x  = @ch.default_exchange
         notifier = INotify::Notifier.new
+        file_filter = config[:file_filter] 
         notifier.watch file_path, :create, :recursive do |event|
-          Thread.new do
-            tail_f event.absolute_name do |lines, queue|
-              send_msg event.name, lines
-              queue.stop if lines.include? config[:eof]
+          if file_filter.nil? or event.name.end_with? file_filter
+            Thread.new do
+              tail_f event.absolute_name do |lines, queue|
+                send_msg event.name, lines
+                queue.stop if lines.include? config[:eof]
+              end
             end
           end
         end
