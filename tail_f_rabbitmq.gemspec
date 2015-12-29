@@ -6,12 +6,11 @@ require 'tail_f_rabbitmq/version'
 Gem::Specification.new do |spec|
   spec.name          = "tail_f_rabbitmq"
   spec.version       = TailFRabbitmq::VERSION
-  spec.authors       = ["TODO: Write your name"]
-  spec.email         = ["TODO: Write your email address"]
+  spec.authors       = ["atpking"]
+  spec.email         = ["atpking@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{tail_f directory and send to rabbitmq}
+  spec.description   = %q{like tail -f command, this gem should caputre the change of files and send it to rabbitmq}
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
